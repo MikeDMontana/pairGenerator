@@ -1,5 +1,6 @@
 import React from 'react';
 import reactDOM from 'react-dom';
+import TrelloBtn from './TrelloBtn';
 
 // create array of objects for backgroundGrid
 const staticNames = [
@@ -102,11 +103,12 @@ class InputNames extends React.Component {
           </div>
           <div className="returnedPairs">
           {this.state.mainArr.map((pairing) => (
-            <ul>
+            <div><ul>
             {pairing.map((coder, i) => (
               <li key={coder.personName}><img className="pairedImg" src={[coder.pic]} /><p>{[coder.personName]}</p></li>
             ))}
             </ul>
+            <TrelloBtn /></div>
           ))}
           </div>
         </div>
